@@ -9,14 +9,14 @@ const mainvue = Vue.createApp({
                 {class: 'youtube', name: 'Nathan F.', num: '8239', status: -144, type: 'Subscribers', ref: 'https://www.youtube.com/'}
             ],
             stats: [
-                {type: 'Page Views', logo: '../../images/icon-facebook.svg', num: '87', status: 3 },
-                {type: 'Likes', logo: '../../images/icon-facebook.svg', num: '52', status: -2 },
-                {type: 'Likes', logo: '../../images/icon-instagram.svg', num: '5462', status: 2257 },
-                {type: 'Profile Views', logo: '../../images/icon-instagram.svg', num: '52k', status: 1375 },
-                {type: 'Retweets', logo: '../../images/icon-twitter.svg', num: '117', status: 303 },
-                {type: 'Likes', logo: '../../images/icon-twitter.svg', num: '507', status: 553 },
-                {type: 'Likes', logo: '../../images/icon-youtube.svg', num: '107', status: -19 },
-                {type: 'Total Views', logo: '../../images/icon-youtube.svg', num: '1407', status: -12 }
+                {type: 'Page Views', logo: 'images/icon-facebook.svg', num: '87', status: 3 },
+                {type: 'Likes', logo: 'images/icon-facebook.svg', num: '52', status: -2 },
+                {type: 'Likes', logo: 'images/icon-instagram.svg', num: '5462', status: 2257 },
+                {type: 'Profile Views', logo: 'images/icon-instagram.svg', num: '52k', status: 1375 },
+                {type: 'Retweets', logo: 'images/icon-twitter.svg', num: '117', status: 303 },
+                {type: 'Likes', logo: 'images/icon-twitter.svg', num: '507', status: 553 },
+                {type: 'Likes', logo: 'images/icon-youtube.svg', num: '107', status: -19 },
+                {type: 'Total Views', logo: 'images/icon-youtube.svg', num: '1407', status: -12 }
             ],
             theme: 'light-theme'
         }
