@@ -3,6 +3,9 @@ mainvue.component('dark-mode', {
     /* html */
     `
     <label class="switch" for="themes">
+            <p style="
+            display: none;
+        ">Dark Mode</p>
         <input type="checkbox" v-model="checked" id="themes">
         <span class="slider round"></span>
     </label>
