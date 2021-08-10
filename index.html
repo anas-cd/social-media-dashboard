@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- General meta tags needed-->
+        <meta charset="utf-8">
+        <!-- Needed for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- custom browser colors on mobile -->
+        <meta name="theme-color" content="#1843c1" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  
+        <title>Frontend Mentor | [Challenge Name Here]</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS File -->
+        <link rel="stylesheet" href="app/dist/style.css">
+
+        <style>
+            .attribution { 
+                font-size: 11px; 
+                text-align: center; 
+                position: relative;
+                margin-bottom: 1rem;
+            }
+            .attribution a { color: hsl(228, 45%, 44%); }
+        </style>
+
+        <!-- development version, For prototyping or learning purposes -->
+        <script src="https://unpkg.com/vue@next"></script>
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body class="light-theme">
+
+        <div class="top-pattern"></div>
+
+        <main id="main" class="light-theme">
+            
+            <div class="dashtop">
+                <div class="dashinfo">
+                    <div class="dashtitle">
+                        <h1>Social Media Dashboard</h1>
+                    </div>
+                    <div class="dashfollcount">
+                        <p>Total Followers: 23,004</p>
+                    </div>
+                </div>
+                <div class="togglediv">
+                    <p>Dark Mode</p>
+                    <!-- toggle component -->
+                    <dark-mode @switch-theme="themeSwitcher"></dark-mode>
+                </div>
+            </div>
+            <div class="followers-stats">
+                <!-- follwers card component -->
+                <follwer-stats v-for="follower in followers" stagger="250" :followers="follower" :theme="theme" ></follwer-stats>
+
+
+            </div>
+            <div class="overview">
+                <h2>Overview - Today</h2>
+            </div>
+            <div class="overview-stats">
+                <overview-card v-for="stat in stats" :stats="stat" @switch-theme="themeSwitcher" :theme="theme"></overview-card>
+
+            </div>
+            
+        </main>
+
+        
+
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Anas Ali</a>.
+        </div>
+
+        <div class="init">
+            <div class="init-cont">
+
+                <img src="/images/loading.gif" alt="loading">
+                <div class="init-text">
+                    <h1> Welcome to your social media Dashboard</h1>
+                    <h3> Preparing your dashboard ...</h3>
+                </div>
+            </div>
+
+        </div>
+        <!-- JavaScript Files -->
+        <script src="app/dist/all.js"></script>
+
+        <!-- vue files -->
+        <script src="app/js/mainVue.js"></script>
+
+        <!-- vue components files -->
+        <!-- <script src="app/js/components/darkMode.js"></script>
+        <script src="app/js/components/followerStatsCard.js"></script> -->
+
+        <!-- mounting mainvue -->
+        <script>
+            const mountedApp = mainvue.mount('#main')
+        </script>
+    </body>
+</html>

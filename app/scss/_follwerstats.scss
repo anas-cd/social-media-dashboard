@@ -1,0 +1,184 @@
+.follwers-card {
+    width: 15.9375rem;
+    height: 13.5rem;
+    border-radius: 4px;
+    padding: 1.5rem 4.1875rem;
+    text-align: center;
+    transition: background-color .5s;
+    margin: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    @media #{$mq-600-down} {
+        max-width: 100%;
+        width: 95%;
+    }
+    &::before {
+        content: "";
+        height: 4px;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        // background: $facebook_color;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #f6f7f8;
+        background: $loading_light;
+
+        border-radius: 4px 4px 0px 0px;
+        transition-duration: 1s;
+    }
+    &:hover {
+
+        cursor: pointer;
+    }
+
+    >.account {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+        >img {
+            width: 20px;
+        }
+        >p {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+    }
+
+    .follwers-number {
+        .foll-num {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $black;
+        }
+        >p:nth-child(2){
+            font-size: .8rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+    }
+
+    .follwers-percentage {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-top: 2rem;
+        align-items: center;
+
+        >img {
+            height: 5px;
+            margin-right: .2rem;
+        }
+        >p {
+
+            font-size: .8rem;
+        }
+
+        &.up {
+            >img {
+                content: url("../../images/icon-up.svg");
+            }
+            color: $lime_green;
+            transition-duration: .5s;
+        }
+        &.down {
+            >img {
+                content: url("../../images/icon-down.svg");
+            }
+            color: $bright_red;
+            transition-duration: .5s;
+        }
+    }
+
+    &.light-theme {
+        background-color: $light_grayish_blue_bg;
+        &:hover {
+            background-color:$hovered_card;
+        }
+
+    }
+
+    &.dark-theme {
+        background-color: $dark_desaturated_blue_bg;
+        .account {
+            p {
+                color: $dark_desaturated_blue_text;
+            }
+        }
+        .follwers-number {
+           .foll-num {
+               color: $white;
+           } 
+           color: $dark_desaturated_blue_text;
+        }
+        &:hover {
+            background-color: $hovered_card_dark;
+        }
+    }
+
+    &.youtube {
+        .account {
+            >img {
+                content: url(../../images/icon-youtube.svg);
+            }
+        }
+        &::before {
+            background: $youtube_color;
+            animation-name: none;
+        }
+
+    }
+    &.facebook {
+        .account {
+            >img {
+                content: url(../../images/icon-facebook.svg);
+            }
+        }
+        &::before {
+            background: $facebook_color;
+            animation-name: none;
+        }
+
+    }
+    &.twitter {
+        .account {
+            >img {
+                content: url(../../images/icon-twitter.svg);
+            }
+        }
+        &::before {
+            background: $twitter_color;
+            animation-name: none;
+        }
+
+    }
+    &.instagram {
+        .account {
+            >img {
+                content: url(../../images/icon-instagram.svg);
+            }
+        }
+        &::before {
+            background: $instagram_color;
+            animation-name: none;
+        }
+
+    }
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}

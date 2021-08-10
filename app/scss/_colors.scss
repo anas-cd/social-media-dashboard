@@ -1,0 +1,45 @@
+$white: #ffffff;
+$black: #000000;
+$dkGray: #303030;
+$ltGray: #cecece;
+
+// primary : 
+
+$lime_green: hsl(163, 72%, 41%);
+$bright_red: hsl(356, 69%, 56%);
+
+$facebook_color: hsl(208, 92%, 53%);
+$twitter_color: hsl(203, 89%, 53%);
+$instagram_color: linear-gradient(70deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%);
+$youtube_color: hsl(348, 97%, 39%);
+
+
+
+// toggle themes : 
+
+$toggle_dark: linear-gradient(90deg, rgba(62,218,130,1) 0%, rgba(55,143,230,1) 100%);
+$toggle_light: hsl(230, 22%, 74%);
+
+
+
+
+// dark theme : 
+
+$very_dark_blue: hsl(225, 17%, 14%); // BG for dark theme $ text for light theme 
+$very_dark_blue_top: #212433; // Top BG Pattern 
+$dark_desaturated_blue_bg: hsl(228, 28%, 20%); 
+$dark_desaturated_blue_text: hsl(228, 34%, 66%); 
+$hovered_card_dark: hsl(228, 26%, 27%);
+
+
+// light theme : 
+
+$very_pale_blue: hsl(225, 100%, 98%); // Top BG Pattern 
+$light_grayish_blue_bg: hsl(227, 47%, 96%); 
+$dark_grayish_blue_text: hsl(228, 12%, 44%); 
+$hovered_card: hsl(232, 33%, 91%);
+
+// loading : 
+$loading_light: linear-gradient(
+    90deg
+    ,#ff3df2 15%,#3356f0 34%,#47f727 63%, #ff3df2 94%);
