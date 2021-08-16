@@ -48,13 +48,24 @@ mainvue.component('dark-mode', {
                 // this.theme.old = 'dark-theme'
                 // this.$emit('switch-theme', this.theme)
                 console.log("light")
-                
+                document.getElementById("themes").checked = false
+                this.checked = false    
             }
 
+
+        },
+        themeupdater() {
 
         }
     },
     mounted() {
+        console.log("mounted entered")
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newColorScheme = e.matches ? "dark" : "light";
+            this.preferedtheme()
+            console.log("theme changed")
+        });
+
         this.preferedtheme()
     }
 })
