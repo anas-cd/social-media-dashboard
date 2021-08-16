@@ -35,23 +35,26 @@ mainvue.component('dark-mode', {
         }
     },methods: {
         preferedtheme() {
-
-
+            console.log("prefered theme started")
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 // this.theme.new = 'dark-theme' 
                 // this.theme.old = 'light-theme' 
                 // this.$emit('switch-theme', this.theme)
-                document.getElementById("checkbox").checked = true;
+                console.log("dark")
+                document.getElementById("themes").checked = true
+                this.checked = true
             }else {
                 // this.theme.new = 'light-theme'
                 // this.theme.old = 'dark-theme'
                 // this.$emit('switch-theme', this.theme)
+                console.log("light")
+                
             }
 
 
         }
     },
-    beforeMount() {
+    mounted() {
         this.preferedtheme()
     }
 })
