@@ -66,7 +66,7 @@ I'm looking forward to learn more about the following points :
 
 ## Author
 
-- Website - [still workin on it ^_^](https://anas-cd.github.io/)
+- Website - [dev.anasali.info](https://dev.anasali.info)
 - Frontend Mentor - [@anas-cd](https://www.frontendmentor.io/profile/anas-cd)
 - Twitter - [@AnasCd](https://twitter.com/AnasCd)
 
